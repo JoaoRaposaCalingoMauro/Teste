@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="senha">
+        <button onclick="mostrarSenha()" id="btn">Esconder</button>
+    </div>
+    <script>
+        function mostrarSenha() {
+            var inputSenha = document.querySelector("#senha");
+            var botao = document.querySelector("#btn");
+
+            //alert(inputSenha.type);
+
+            if (inputSenha.type == "text") {
+               inputSenha.setAttribute("type","password");
+               botao.innerHTML = "Mostrar" ;   
+            }else{
+                inputSenha.setAttribute("type","text");
+                botao.innerHTML = "Esconder" ;   
+            }
+        }
+    </script>
+</body>
+</html>
